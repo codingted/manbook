@@ -3,6 +3,7 @@ require 'test_helper'
 class BooksControllerTest < ActionDispatch::IntegrationTest
   setup do
     @book = books(:one)
+    @common_title = " | Manbook"
   end
 
   test "should get index" do
@@ -13,6 +14,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_book_url
     assert_response :success
+    assert_select "title", "New#{@common_title}"
   end
 
   test "should create book" do
@@ -26,6 +28,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   test "should show book" do
     get book_url(@book)
     assert_response :success
+    assert_select "title", "Detail#{@common_title}"
   end
 
   test "should get edit" do
