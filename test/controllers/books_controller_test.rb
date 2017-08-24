@@ -3,7 +3,7 @@ require 'test_helper'
 class BooksControllerTest < ActionDispatch::IntegrationTest
   setup do
     @book = books(:one)
-    @common_title = " | Manbook"
+    @common_title = " | ManBook"
   end
 
   test "should get index" do
