@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   def hello
       render html: "hello budy"
   end
+
+  def home
+    redirect_to home
+  end
 end

@@ -1,3 +1,9 @@
+-- 书籍的分类信息
+create table book_category(
+    name varchr(64) not null,
+    seq int not null
+
+)
 -- 书籍信息
 create table book (
     id int auto_increment primary key,
