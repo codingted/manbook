@@ -39,7 +39,7 @@ create table publish_info(
 );
 
 -- 出版社信息
-create table publisher_info(
+create table publication(
     id int auto_increment primary key,
 )
 

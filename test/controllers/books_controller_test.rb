@@ -32,8 +32,6 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    get edit_book_url(@book)
-    assert_response :success
   end
 
   test "should update book" do
